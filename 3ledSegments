@@ -108,7 +108,7 @@ long latenight_numbers[] = {
   0b010000010010010000000,  // [13] F(ahrenheit)
 };
 void copy_array(long* src, long* dst, int len) {
-    memcpy(dst, src, sizeof(src[0])*len);
+  memcpy(dst, src, sizeof(src[0])*len);
 }
 
 void setup() {
@@ -342,7 +342,7 @@ void displayNumber(byte number, byte segment, CRGB color) {
 
 }
 
-void displayNumberPallette(byte number, byte segment, byte dim=0) {
+void displayNumberPallette(byte number, byte segment, byte dim = 0) {
   /*
 
       __ __ __        __ __ __          __ __ __        12 13 14
@@ -374,19 +374,19 @@ void displayNumberPallette(byte number, byte segment, byte dim=0) {
       break;
   }
   CRGB color;
-long nums[14];
-switch (dim) {
-  case 0:
-  copy_array(numbers, nums, 14);
-  break;
-  case 1:
-  copy_array(night_numbers, nums, 14);
-  break;
-  case 2:
-  copy_array(latenight_numbers, nums, 14);
-  break;
-}
-  
+  long nums[14];
+  switch (dim) {
+    case 0:
+      copy_array(numbers, nums, 14);
+      break;
+    case 1:
+      copy_array(night_numbers, nums, 14);
+      break;
+    case 2:
+      copy_array(latenight_numbers, nums, 14);
+      break;
+  }
+
   for (byte i = 0; i < 21; i++) {
     //yield();
     if ((nums[number] & 1 << i) == 1 << i) {
@@ -430,17 +430,10 @@ void updateClock() {
 
 
 
-    
-  /*
-    byte h1 = hour / 10;
-    byte h2 = hour % 10;
-    byte m1 = mins / 10;
-    byte m2 = mins % 10;
-  */
-  byte h1 = 1;
-  byte h2 = 2;
-  byte m1 = 3;
-  byte m2 = 4;
+  byte h1 = hour / 10;
+  byte h2 = hour % 10;
+  byte m1 = mins / 10;
+  byte m2 = mins % 10;
   byte s1 = secs / 10;
   byte s2 = secs % 10;
 
