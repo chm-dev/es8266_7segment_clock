@@ -22,8 +22,8 @@ const char* APpassword = "dupadupa";
 
 #if defined(WIFIMODE) && (WIFIMODE == 1 || WIFIMODE == 2)
 // #include "Credentials.h"                    // Create this file in the same directory as the .ino file and add your credentials (#define SID YOURSSID and on the second line #define PW YOURPASSWORD)
-const char *ssid = "Bog Wybacza Arka Nigdy 2.4";
-const char *password = "matkaboska1000";
+const char *ssid = "";
+const char *password = "";
 #endif
 
 
